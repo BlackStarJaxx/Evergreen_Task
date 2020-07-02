@@ -57,8 +57,8 @@
 <form method="GET" id="sort_filter_reset">
         <label>Select group by :</label>    
         <select name="sort" id="sort_filter">
-            <option  value="1">At a price initially expensive</option>
-            <option  value="2">At a price initially cheap</option>
+            <option  value="2">At a price initially expensive</option>
+            <option  value="1">At a price initially cheap</option>
             <option  value="3">By name, A-Z</option>
             <option  value="4">By name, Z-A</option>
         </select>
