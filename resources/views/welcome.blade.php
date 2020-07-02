@@ -10,8 +10,6 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        
-        
     </head>
   
     <body>
@@ -39,8 +37,7 @@
 </form>
 
 <form id="brands_filter"  method="GET" style="margin-bottom:25px;">
-<legend>Filter on Brands</legend>
-    <div>
+    <legend>Filter on Brands</legend>
         <input type="checkbox"name="brands[]" value="1">
         <label>Apple</label>
     
@@ -55,13 +52,9 @@
 
         <input type="checkbox" name="brands[]" value="5">
         <label>Asus</label>
-
-
-    </div>
 </form>
 
 <form method="GET" id="sort_filter_reset">
-
         <label>Select group by :</label>    
         <select name="sort" id="sort_filter">
             <option  value="1">At a price initially expensive</option>
@@ -69,7 +62,6 @@
             <option  value="3">By name, A-Z</option>
             <option  value="4">By name, Z-A</option>
         </select>
-
  </form>
 
 </div>
@@ -114,7 +106,6 @@
 
   jQuery('input[name="brands[]"]').on("change", function(e){
             e.preventDefault();
-            // console.log($('input[name="categories[]"]:checked', '#category_filter').val());
             let querry = " "
 
             cat_hashes = $( "#category_filter" ).serialize();
@@ -132,7 +123,7 @@
                 jQuery(".products").html(" ");
                 data.map(item => {
                 jQuery(".products").append(`<li>Name: ${item.name} <br> Price: ${item.price} $<br> Brand: ${item.brand.name} <br> Category: ${item.category.name} <br><img src="${item.image_url}">  </li>`);
-            }); console.log();
+            }); 
         });
     });
 
