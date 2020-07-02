@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Brand extends Seeder
+class BrandSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,13 @@ class Brand extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('brands')->insert([
+            ['name' => "Apple"],
+            ['name' => "Samsung"],
+            ['name' => "Acer"],
+            ['name' => "Xiomi"],
+            ['name' => "Asus"]
+        ]);
     }
+    
 }
